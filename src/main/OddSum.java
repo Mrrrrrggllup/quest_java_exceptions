@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class OddSum {
 
@@ -17,7 +18,12 @@ public class OddSum {
             System.out.println();
         }
         for (int i = 0; i < args.length; i++) {
-            listInt.add(Integer.parseInt(args[i]));
+            try {
+                listInt.add(Integer.parseInt(args[i]));
+            }catch (NumberFormatException e){
+                System.out.println("La valeur à l'indice "+i+" n'est pas un entier, je renvois donc (arbitrairement) -1 !" );
+                return -1;
+            }
         }
 
         res = sum(listInt);

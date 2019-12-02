@@ -19,10 +19,10 @@ public class OddSumTest {
     	String[] in = {"1", "20", "31", "45", "52", "61"};
         Assert.assertEquals(138, OddSum.run(in, true));
     }
+
     @Test
     public void testException() throws Exception {
     	String[] in = {"1", "2", "3", "4", "5", "a"};
         Assert.assertEquals(-1, OddSum.run(in, true));
     }
-
 }
